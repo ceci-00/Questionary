@@ -5,20 +5,25 @@
     box-sizing: border-box;
 }
 
-header{
-
+header {
+    margin-bottom: 10px;
 }
 
 .scores {
-    position: fixed; top: 0px; left: 0px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
 }
 
 .timer {
-    position: fixed; top: 0px, right: 0px;
+    position: fixed;
+    top: 0px, right: 0px;
+
 }
 
 body {
     background-color: blueviolet;
+
 }
 
 .start {
@@ -52,3 +57,8 @@ body {
     padding: 5px 8px;
 
 }
+
+#quiz-box {
+    padding: 20px;
+}
+
