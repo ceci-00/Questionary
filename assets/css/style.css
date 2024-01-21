@@ -28,3 +28,9 @@ body {
     margin: 100px auto 0;
     padding: 40px;
 }
+
+.start h1 {
+    font-weight: 30px;
+    padding-bottom: 25px;
+    text-align: center;
+}
