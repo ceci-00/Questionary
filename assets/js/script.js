@@ -1,3 +1,8 @@
+var initialPage = document.createElement <h1>("starter", "Coding Quiz Challenge");
+append.getElementById(initialPage);
+
+
+
 var questionE1 = document.getElementById ("question");
 var optionId = document.getElementById("option");
 
@@ -31,3 +36,26 @@ function startQuiz(event) {
         answer: "4. console.log",
     },    
 ];
+
+// randomize selection of questions 
+
+//populate answers on page
+
+//function to check for correct answer
+
+// if else statement for incorrect answers
+
+//display Correct! or Wrong! answer
+
+//timer
+
+//load next question
+
+// all done screen - enter initials and submit to view high scores
+
+// display scores
+
+// saves submit form info into local storage
+
+// gathers data from previous scores and sorts highest to lowest
+
