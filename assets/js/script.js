@@ -1,4 +1,10 @@
-var questions = [
+var questionE1 = document.getElementById ("question");
+var optionId = document.getElementById("option");
+
+function startQuiz(event) {
+    event.preventDefault;
+}   
+    var questionList = [
     {
         question: "Commonly used data types DO not Include:",
         options: [ "1. strings", "2. booleans", "3. alerts", "4. numbers"],
@@ -24,5 +30,4 @@ var questions = [
         options: ["1. Javascript", "2. terminal/bash", "3. for loops", "4. console.log"],
         answer: "4. console.log",
     },    
-]
-
+];
