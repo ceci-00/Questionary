@@ -56,6 +56,11 @@ body {
     border: 1px solid black;
 }
 
+#start-btn button:hover {
+    background: rgb(174, 43, 183);
+    color: white;
+}
+
 #quiz-box {
     padding: 20px;
     text-align: center;
