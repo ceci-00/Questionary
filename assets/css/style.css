@@ -75,8 +75,8 @@ body {
     padding: 5px 8px;
     border: 1px solid black;
     text-align: left;
-    width: 50%;
-    margin: 10px 0;
+    width: 18%;
+    margin: 5px 400px 5px 200px;
     cursor: pointer;
     transition: all 0.3s;
 }
