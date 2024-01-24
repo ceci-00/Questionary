@@ -23,12 +23,14 @@ body {
 .flex-column {
     display: flex;
     flex-direction: column;
-    margin: 80px;
+    text-align: center;
+    justify-content: center;
 }
 
 .flex-center {
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 h1 {
@@ -41,21 +43,24 @@ h1 {
 }
 
 .start-btn {
-    text-align: center;
-    border-radius: 5px;
-}
-
-.start-btn button {
     background-color: rgb(28, 0, 128);
     color: white;
     border-radius: 5px;
     padding: 5px 8px;
     border: 1px solid black;
+    text-align: center;
+    border-radius: 5px;
 }
 
-.start-btn button:hover {
+.start-btn:hover {
     background: rgb(174, 43, 183);
     color: white;
+}
+
+.btn[disabled]:hover {
+    cursor: none;
+    box-shadow: none;
+    transform: none;
 }
 
 #quiz-box {
