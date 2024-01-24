@@ -5,20 +5,32 @@
     box-sizing: border-box;
 }
 
-header {
-    margin-bottom: 10px;
-}
-
 body {
     background-color: blueviolet;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
 }
 
 .flex-column {
     display: flex;
     flex-direction: column;
+    margin: 80px;
 }
 
-.flex
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
 
 h1 {
     margin-bottom: 15px;
