@@ -1,24 +1,24 @@
-var initialPage = document.createElement <h1>("starter", "Coding Quiz Challenge");
+var initialPage = document.createElement < h1 > ("starter", "Coding Quiz Challenge");
 append.getElementById(initialPage);
 
 
 
-var questionE1 = document.getElementById ("question");
+var questionE1 = document.getElementById("question");
 var optionId = document.getElementById("option");
 
 function startQuiz(event) {
     event.preventDefault;
-}   
-    var questionList = [
+}
+var questionList = [
     {
         question: "Commonly used data types DO not Include:",
-        options: [ "1. strings", "2. booleans", "3. alerts", "4. numbers"],
-        answer: "2. booleans", 
+        options: ["1. strings", "2. booleans", "3. alerts", "4. numbers"],
+        answer: "2. booleans",
     },
     {
         question: "The condition in an if/else statement is enclosed with _______.",
         options: ["1. quotes", "2. curly brackets", "3. parenthesis", "4. square brackets"],
-        answer: "3. parenthesis", 
+        answer: "3. parenthesis",
     },
     {
         question: "Arrays in Javascript can be used to store _______.",
@@ -34,10 +34,10 @@ function startQuiz(event) {
         question: "A very useful tool used during development and debugging for printing content to the debugger is:",
         options: ["1. Javascript", "2. terminal/bash", "3. for loops", "4. console.log"],
         answer: "4. console.log",
-    },    
+    },
 ];
 
-// randomize selection of questions 
+// randomize selection of questions
 
 //populate answers on page
 
