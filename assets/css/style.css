@@ -29,12 +29,12 @@ body {
     padding-bottom: 25px;
 }
 
-#start-btn {
+.start-btn {
     text-align: center;
     border-radius: 5px;
 }
 
-#start-btn button {
+.start-btn button {
     background-color: rgb(28, 0, 128);
     color: white;
     border-radius: 5px;
@@ -42,7 +42,7 @@ body {
     border: 1px solid black;
 }
 
-#start-btn button:hover {
+.start-btn button:hover {
     background: rgb(174, 43, 183);
     color: white;
 }
