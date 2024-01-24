@@ -9,16 +9,7 @@ header {
     margin-bottom: 10px;
 }
 
-.scores {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-}
 
-.timer {
-    position: fixed;
-    top: 0px, right;
-}
 
 body {
     background-color: blueviolet;
