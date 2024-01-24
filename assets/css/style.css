@@ -9,12 +9,19 @@ header {
     margin-bottom: 10px;
 }
 
-h1 {
-    margin-bottom: 15px;
-}
-
 body {
     background-color: blueviolet;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex
+
+h1 {
+    margin-bottom: 15px;
 }
 
 .beginning {
