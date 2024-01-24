@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+#highscores-btn {
+    color: rgb(174, 43, 183);
+}
+
 body {
     background-color: blueviolet;
 }
@@ -35,11 +39,7 @@ body {
 
 h1 {
     margin-bottom: 15px;
-}
-
-.beginning {
     text-align: center;
-    padding-bottom: 25px;
 }
 
 .start-btn {
@@ -90,3 +90,4 @@ h1 {
     background: rgb(174, 43, 183);
     color: white;
 }
+
