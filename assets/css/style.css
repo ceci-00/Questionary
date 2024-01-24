@@ -24,20 +24,6 @@ body {
     background-color: blueviolet;
 }
 
-.start {
-    background-color: white;
-    width: 90%;
-    max-width: 600px;
-    margin: 40px auto 0;
-    padding: 40px;
-}
-
-.start h1 {
-    font-weight: 30px;
-    padding-bottom: 25px;
-    text-align: center;
-}
-
 .beginning {
     text-align: center;
     padding-bottom: 25px;
