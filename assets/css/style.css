@@ -13,7 +13,7 @@ body {
     background-color: blueviolet;
 }
 
-.home {
+#home {
         background-color: white;
         width: 90%;
         max-width: 600px;
@@ -21,13 +21,14 @@ body {
         padding: 40px;
 }
 
-.home h1 {
+#home h1 {
     margin-bottom: 15px;
     text-align: center;
+    padding: 0px 30px;
 }
 
-p {
-    margin: 0px 80px 40px 0px;
+#home p {
+    margin: 0px 40px;
     margin-bottom: 40px;
     text-align: center;
     justify-content: center;
