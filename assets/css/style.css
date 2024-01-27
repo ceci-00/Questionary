@@ -42,6 +42,7 @@ body {
     border: 1px solid black;
     text-align: center;
     border-radius: 5px;
+    margin: 0px 200px;
 }
 
 .start-btn:hover {
