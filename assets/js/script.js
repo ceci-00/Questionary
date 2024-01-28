@@ -1,10 +1,12 @@
 var startButton = document.getElementById('start-btn')
 
-startButton.addEventListener('click', startQuiz);
+
+startButton.addEventListener('click', startQuiz)
 
 function startQuiz() {
     console.log('started');
-};
+    document.getElementById('home').style.display='none';
+}
 
 
 
