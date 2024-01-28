@@ -9,17 +9,59 @@ body {
     background-color: blueviolet;
 }
 
-#home {
-        background-color: white;
-        width: 60%;
-        margin: 50px auto;
-        padding: 40px;
+.main {
+    background-color: aqua;
 }
 
-#home h1 {
+.header {
+    background-color: aquamarine;
+}
+
+.high-scores {
+    color: rgb(174, 43, 183);
+}
+
+.home {
+        background-color: white;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.home-page {
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home-page h1 {
     margin-bottom: 15px;
     text-align: center;
-    padding: 0px 30px;
+
+}
+
+.home-page p {
+    text-align: center;
+    margin-bottom: 30px;   
+}
+
+.start-btn {
+    background-color: rgb(28, 0, 128);
+    color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+}
+
+.start-btn:hover {
+    background: rgb(174, 43, 183);
+    color: white;
 }
 
 #rules {
@@ -29,19 +71,16 @@ body {
     justify-content: center;
 }
 
-.start-btn {
-    background-color: rgb(28, 0, 128);
-    color: white;
-    border-radius: 5px;
-    padding: 5px 8px;
-    border: 1px solid black;
-    text-align: center;
-    border-radius: 5px;
-    margin: 0px 300px;
-}
 
-.start-btn:hover {
-    background: rgb(174, 43, 183);
-    color: white;
-}
+
+
+
+
+
+
+
+
+
+
+
 
