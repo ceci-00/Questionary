@@ -5,10 +5,6 @@
     box-sizing: border-box;
 }
 
-#highscores-btn {
-    color: rgb(174, 43, 183);
-}
-
 body {
     background-color: blueviolet;
 }
@@ -26,7 +22,7 @@ body {
     padding: 0px 30px;
 }
 
-#home p {
+#rules {
     margin: 0px 40px;
     margin-bottom: 40px;
     text-align: center;
