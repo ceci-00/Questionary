@@ -66,15 +66,15 @@ function startQuiz() {
 // gathers data from previous scores and sorts highest to lowest
 
 // questions html
-// <div class="container">
-//    <div id="quiz" class="justify-center flex-column">
-//        <h2 id="question">Enter Question Here</h2>
-//        <div id="answer-btns">
-//            <button class="btn" id="option">Answer 1</button>
-//            <button class="btn" id="option">Answer 2</button>
-//            <button class="btn" id="option">Answer 3</button>
-//            <button class="btn" id="option">Answer 4</button>
-//        </div>
-//    </div>
-// </div>
+
+
+
+
+
+
+
+
+
+
+
 
