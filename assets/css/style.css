@@ -36,7 +36,6 @@ body {
 .home-page h1 {
     margin-bottom: 15px;
     text-align: center;
-
 }
 
 .home-page p {
@@ -51,8 +50,8 @@ body {
     border: 1px solid black;
     text-align: center;
     border-radius: 5px;
-    width: 100px;
-    height: 40px;
+    width: 90px;
+    height: 30px;
 }
 
 .start-btn:hover {
@@ -60,14 +59,43 @@ body {
     color: white;
 }
 
-#rules {
-    margin: 0px 40px;
-    margin-bottom: 40px;
-    text-align: center;
+.quiz {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    display: flex;
     justify-content: center;
 }
 
+.quiz h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
 
+.answer-btns {
+    display: grid;
+    padding-right: 140px;
+}
+
+.btn {
+    background-color: rgb(28, 0, 128);
+    color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5px;
+    width: 90px;
+    height: 30px;
+    margin-bottom: 8px;
+}
+
+.btn:hover {
+    background: rgb(174, 43, 183);
+    color: white;
+}
 
 
 
