@@ -13,13 +13,10 @@ startButton.addEventListener('click', startQuiz)
 
 function startQuiz() {
     console.log('started')
-    // hides home page and starts quiz with 1st question
+    // hides home page and displays quiz container
     document.getElementById('home').style.display = 'none'
     document.getElementById('quiz-container').style.display = 'block'
-
-    // questionEl.innerText(shuffleQuestions)
-    // console.log(shuffleQuestions)
-    // setNextQuestion()
+    // show first question
     showQuestion()
 }
 // load next question
@@ -42,7 +39,6 @@ function showQuestion() {
 
     var currentQuestion = questionList[currentQuestionIndex];
     console.log("SHow Question: ", currentQuestion);
-    // randomize selection of questions
 
     questionEl.innerText = currentQuestion.question
     currentQuestion.options.forEach((option, index) => {
@@ -62,8 +58,13 @@ function selectAnswer(e) {
     console.log(currentQuestion)
     var correctAnswer = currentQuestion.correct
     console.log(correctAnswer)
-    //if it's correct do correct stuff
-    //else do incorrect stuff
+    if (selectedAnswer === correctAnswer) {
+        //if it's correct do correct stuff
+        console.log('CORRRRECT!')
+    } else {
+        //else do incorrect stuff
+        console.log("WRONG ANSWER");
+    }
 
     setNextQuestion()
 
