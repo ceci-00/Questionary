@@ -80,7 +80,7 @@ body {
     padding-right: 140px;
 }
 
-.btn {
+#btn {
     background-color: rgb(28, 0, 128);
     color: white;
     border-radius: 5px;
@@ -97,7 +97,18 @@ body {
     color: white;
 }
 
+.feedback {
+    font-style: italic;
+    font-size: 120%;
+    margin-top: 20px;
+    padding-top: 10px;
+    color: gray;
+    border-top: 2px solid rgb(201, 193, 193);
+}
 
+.hide {
+    display: none;
+}
 
 
 

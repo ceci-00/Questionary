@@ -1,81 +1,11 @@
 var startButton = document.getElementById('start-btn')
-console.dir(startButton)
 var questionEl = document.getElementById('question')
 var answerButtons = document.getElementsByClassName('btn')
-var currentQuestionIndex = 0
-function logStart() {
-    console.log("=====================================")
-}
-function logEnd() {
-    console.log("*****************************************")
-}
-startButton.addEventListener('click', startQuiz)
+var timerEl = document.getElementById('timer')
+// var submitBtn = document.querySelector("#submit");
+// var initialsEl = document.querySelector("#initials");
+var feedbackEl = document.getElementById('feedback')
 
-function startQuiz() {
-    console.log('started')
-    // hides home page and displays quiz container
-    document.getElementById('home').style.display = 'none'
-    document.getElementById('quiz-container').style.display = 'block'
-    // show first question
-    showQuestion()
-}
-// load next question
-function setNextQuestion() {
-    logStart()
-    console.log("Setting next question")
-    // if I'm not at the end of my array -> 
-    //currentQuestionIndex ++ 
-    // showQuestion()
-    //else {
-    // endQuiz()
-    // }
-    logEnd()
-}
-
-//timer you'll need to check if we've reached the last question or we ran out of time -> end the Timer and call endQuiz()
-
-function showQuestion() {
-    console.log("Showing question function running");
-
-    var currentQuestion = questionList[currentQuestionIndex];
-    console.log("SHow Question: ", currentQuestion);
-
-    questionEl.innerText = currentQuestion.question
-    currentQuestion.options.forEach((option, index) => {
-        answerButtons[index].innerText = option;
-        answerButtons[index].addEventListener('click', selectAnswer)
-    })
-}
-
-function selectAnswer(e) {
-    console.log("SELECTED")
-    console.log(e);
-    var selectedButton = e.target
-    console.log(selectedButton)
-    var selectedAnswer = selectedButton.innerText
-    console.log(selectedAnswer)
-    var currentQuestion = questionList[currentQuestionIndex];
-    console.log(currentQuestion)
-    var correctAnswer = currentQuestion.correct
-    console.log(correctAnswer)
-    if (selectedAnswer === correctAnswer) {
-        //if it's correct do correct stuff
-        console.log('CORRRRECT!')
-    } else {
-        //else do incorrect stuff
-        console.log("WRONG ANSWER");
-    }
-
-    setNextQuestion()
-
-}
-
-//varr questionE1 = document.getElementById("question");
-//var optionId = document.getElementById("option");
-//
-//function startQuiz(event) {
-//  event.preventDefault;
-//
 var questionList = [
     {
         question: "Commonly used data types DO not Include:",
@@ -104,7 +34,106 @@ var questionList = [
     },
 ];
 
+var time = questionList.length * 15;
+console.log(time);
+var timerID
+var currentQuestionIndex = 0
+
+function logStart() {
+    console.log("=====================================")
+}
+function logEnd() {
+    console.log("*****************************************")
+}
+
+startButton.addEventListener('click', startQuiz)
+
+function startQuiz() {
+    console.log('started')
+    // hides home page and displays quiz container
+    document.getElementById('home').style.display = 'none'
+    //display quiz section
+    document.getElementById('quiz-container').style.display = 'block'
+    //start timer
+    timerID = setInterval(clockTick, 1000)
+    //show start time
+    timerEl.textContent = time
+    // show first question
+    showQuestion()
+}
+
+//timer you'll need to check if we've reached the last question or we ran out of time -> end the Timer and call endQuiz()
+
+function showQuestion() {
+    console.log("Showing question function running");
+    // get the current question from the array
+    var currentQuestion = questionList[currentQuestionIndex];
+    console.log("Show Question: ", currentQuestion);
+    // display the question
+    questionEl.innerText = currentQuestion.question
+    // display the options
+    var options = currentQuestion.options
+    console.log(options)
+    // loop through the options and display them
+    for (var i = 0; i < options.length; i++) {
+        answerButtons[i].innerText = options[i]
+        answerButtons[i].addEventListener('click', selectAnswer)
+    }
+}
+
+function selectAnswer(e) {
+    console.log("SELECTED")
+    //
+    console.log(e);
+    var selectedButton = e.target
+    // console.log(selectedButton)
+    var selectedAnswer = selectedButton.innerText
+    console.log(selectedAnswer)
+    var currentQuestion = questionList[currentQuestionIndex];
+    // console.log(currentQuestion)
+    var correctAnswer = currentQuestion.correct
+    console.log(correctAnswer)
+    if (selectedAnswer === correctAnswer) {
+        //if it's correct do correct stuff
+        console.log('Correct!');
+        time += 10
+        feedbackEl.textContent = 'Correct!'
+    } else {
+        //penalize time
+        console.log('Wrong!');
+        time -= 15
+        feedbackEl.textContent = 'Wrong!'
+    }
+
+    setNextQuestion()
+
+}
+
+// load next question
+function setNextQuestion() {
+    console.log("Setting next question")
+    // if I'm not at the end of my array ->
+    var fullLength = questionList.length
+    console.log(fullLength)
+    if (currentQuestionIndex <= fullLength) {
+        // currentQuestionIndex++
+        showQuestion()
+    } else {
+        endQuiz()
+        console.log('end of quiz')
+
+    }
+    currentQuestionIndex++
+}
+
+function endQuiz() {
+    logStart()
+    console.log("end of quiz")
+    logEnd
+}
+
 //populate answers on page
+
 
 //function to check for correct answer
 
@@ -113,6 +142,16 @@ var questionList = [
 //display Correct! or Wrong! answer
 
 //timer
+function clockTick() {
+    // update time
+    time--;
+    timerEl.textContent = time;
+
+    // check if user ran out of time
+    if (time <= 0) {
+        quizEnd();
+    }
+}
 
 // all done screen - enter initials and submit to view high scores
 
