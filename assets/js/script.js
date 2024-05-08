@@ -1,6 +1,6 @@
 var startButton = document.getElementById('start-btn')
 var questionEl = document.getElementById('question')
-var answerButtons = document.getElementsByClassName('btn')
+var answerButtons = document.querySelectorAll('#answer-btns button')
 var timerEl = document.getElementById('timer')
 // var submitBtn = document.querySelector("#submit");
 // var initialsEl = document.querySelector("#initials");
@@ -38,6 +38,7 @@ var time = questionList.length * 15;
 console.log(time);
 var timerID
 var currentQuestionIndex = 0
+var currentQuestion = questionList[currentQuestionIndex];
 
 function logStart() {
     console.log("=====================================")
@@ -67,7 +68,6 @@ function startQuiz() {
 function showQuestion() {
     console.log("Showing question function running");
     // get the current question from the array
-    var currentQuestion = questionList[currentQuestionIndex];
     console.log("Show Question: ", currentQuestion);
     // display the question
     questionEl.innerText = currentQuestion.question
@@ -86,23 +86,23 @@ function selectAnswer(e) {
     //
     console.log(e);
     var selectedButton = e.target
-    // console.log(selectedButton)
+    console.log(selectedButton)
     var selectedAnswer = selectedButton.innerText
     console.log(selectedAnswer)
-    var currentQuestion = questionList[currentQuestionIndex];
-    // console.log(currentQuestion)
     var correctAnswer = currentQuestion.correct
     console.log(correctAnswer)
     if (selectedAnswer === correctAnswer) {
-        //if it's correct do correct stuff
+        //if it's correct
         console.log('Correct!');
         time += 10
         feedbackEl.textContent = 'Correct!'
+        feedbackEl.style.color = 'green'
     } else {
-        //penalize time
+        //if wrong, penalize time
         console.log('Wrong!');
         time -= 15
         feedbackEl.textContent = 'Wrong!'
+        feedbackEl.style.color = 'red'
     }
 
     setNextQuestion()
@@ -132,16 +132,6 @@ function endQuiz() {
     logEnd
 }
 
-//populate answers on page
-
-
-//function to check for correct answer
-
-// if else statement for incorrect answers
-
-//display Correct! or Wrong! answer
-
-//timer
 function clockTick() {
     // update time
     time--;
