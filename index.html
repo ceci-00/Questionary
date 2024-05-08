@@ -12,8 +12,8 @@
 <body>
     <main class="main">
         <header class="header">
-            <a href="#" class="high-scores">View High Scores</a>
-            <a href="#" class="timer"></a>
+            <div href="scores.html" class="high-scores">View High Scores</div>
+            <div class="time">Time: <span id="timer">0</span></div>
         </header>
 
         <section id = "home" class="home">
@@ -30,12 +30,14 @@
     <div class="quiz" id="quiz-container">
         <h2 id="question">Enter Question Here</h2>
         <div id="answer-btns" class="answer-btns">
-            <button class="btn">Answer 1</button>
-            <button class="btn">Answer 2</button>
-            <button class="btn">Answer 3</button>
-            <button class="btn">Answer 4</button>
+            <button id="btn">Answer 1</button>
+            <button id="btn">Answer 2</button>
+            <button id="btn">Answer 3</button>
+            <button id="btn">Answer 4</button>
         </div>
     </div>
+        <div id="feedback" class="feedback hide"></div>
+        </div>
     <script src="assets/js/script.js"></script>
 </body>
 
