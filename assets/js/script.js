@@ -34,9 +34,11 @@ var questionList = [
     },
 ];
 
+// setting up the timer
 var time = questionList.length * 15;
 console.log(time);
 var timerID
+// setting up the current question
 var currentQuestionIndex = 0
 var currentQuestion = questionList[currentQuestionIndex];
 
@@ -47,7 +49,6 @@ function logEnd() {
     console.log("*****************************************")
 }
 
-startButton.addEventListener('click', startQuiz)
 
 function startQuiz() {
     console.log('started')
@@ -66,8 +67,6 @@ function startQuiz() {
 //timer you'll need to check if we've reached the last question or we ran out of time -> end the Timer and call endQuiz()
 
 function showQuestion() {
-    console.log("Showing question function running");
-    // get the current question from the array
     console.log("Show Question: ", currentQuestion);
     // display the question
     questionEl.innerText = currentQuestion.question
@@ -80,56 +79,58 @@ function showQuestion() {
         answerButtons[i].addEventListener('click', selectAnswer)
     }
 }
-
+// select answer
 function selectAnswer(e) {
-    console.log("SELECTED")
-    //
+    console.log("SELECTED");
     console.log(e);
-    var selectedButton = e.target
-    console.log(selectedButton)
-    var selectedAnswer = selectedButton.innerText
-    console.log(selectedAnswer)
-    var correctAnswer = currentQuestion.correct
-    console.log(correctAnswer)
+    var selectedButton = e.target;
+    console.log(selectedButton);
+    var selectedAnswer = selectedButton.innerText;
+    console.log(selectedAnswer);
+    var correctAnswer = currentQuestion.correct;
+    console.log(correctAnswer);
     if (selectedAnswer === correctAnswer) {
         //if it's correct
         console.log('Correct!');
-        time += 10
-        feedbackEl.textContent = 'Correct!'
-        feedbackEl.style.color = 'green'
+        time += 10;
+        feedbackEl.textContent = 'Correct!';
+        feedbackEl.style.color = 'green';
     } else {
         //if wrong, penalize time
         console.log('Wrong!');
-        time -= 15
-        feedbackEl.textContent = 'Wrong!'
-        feedbackEl.style.color = 'red'
+        time -= 15;
+        feedbackEl.textContent = 'Wrong!';
+        feedbackEl.style.color = 'red';
     }
 
-    setNextQuestion()
-
+    // Set a timeout to display the feedback and move to the next question
+    setTimeout(function () {
+        feedbackEl.textContent = '';
+        if (currentQuestionIndex < questionList.length - 1) {
+            setNextQuestion();
+        } else {
+            endQuiz();
+        }
+    }, 1000);
 }
 
 // load next question
 function setNextQuestion() {
-    console.log("Setting next question")
-    // if I'm not at the end of my array ->
-    var fullLength = questionList.length
-    console.log(fullLength)
-    if (currentQuestionIndex <= fullLength) {
-        // currentQuestionIndex++
-        showQuestion()
+    console.log("Setting next question");
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questionList.length) {
+        currentQuestion = questionList[currentQuestionIndex];
+        showQuestion();
     } else {
-        endQuiz()
-        console.log('end of quiz')
-
+        endQuiz();
+        console.log('end of quiz');
     }
-    currentQuestionIndex++
 }
 
 function endQuiz() {
-    logStart()
-    console.log("end of quiz")
-    logEnd
+    logStart();
+    console.log("end of quiz");
+    logEnd(); // Call the logEnd function
 }
 
 function clockTick() {
@@ -153,6 +154,7 @@ function clockTick() {
 
 
 
+startButton.addEventListener('click', startQuiz)
 
 
 
