@@ -1,3 +1,8 @@
+:root {
+    background-color: #ecf5ff;
+    font-size: 16px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +10,32 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: blueviolet;
+h1,
+h2,
+h3,
+h4 {
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 5rem;
+    margin-bottom: 5rem;
+}
+
+h1 > span {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 2.5rem;
+    font-weight: 500;
 }
 
 .header {
@@ -31,11 +60,6 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-}
-
-.home-page h1 {
-    margin-bottom: 15px;
-    text-align: center;
 }
 
 .home-page p {
