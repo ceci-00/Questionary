@@ -82,17 +82,27 @@ h3 {
 .start-btn {
     background-color: rgb(28, 0, 128);
     color: white;
+    text-decoration: none;
+    margin-bottom: 1rem;
     border-radius: 5px;
-    border: 1px solid black;
+    border: 0.1rem solid black;
     text-align: center;
     border-radius: 5px;
-    width: 90px;
-    height: 30px;
+    width: 6rem;
+    padding: 0.5rem;
 }
 
 .start-btn:hover {
     background: rgb(174, 43, 183);
     color: white;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
 }
 
 .quiz {
