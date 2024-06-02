@@ -104,7 +104,7 @@ header {
     margin-bottom: 10px;
 }
 
-.btn:hover {
+#choices:hover {
     background: rgb(174, 43, 183);
     color: white;
 }
@@ -118,6 +118,47 @@ header {
     border-top: 2px solid rgb(201, 193, 193);
 }
 
-.hide {
-    display: none;
+.feedback.correct {
+    color: green;
+}
+
+.feedback.wrong {
+    color: red;
+}
+
+.end {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.end h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.end p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.end-btn {
+    background-color: rgb(28, 0, 128);
+    color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5px;
+    width: 90px;
+    height: 30px;
+}
+
+.end-btn:hover {
+    background: rgb(174, 43, 183);
+    color: white;
 }
