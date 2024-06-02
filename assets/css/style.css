@@ -126,7 +126,7 @@ h3 {
     padding-right: 140px;
 }
 
-#btn {
+.choices {
     background-color: rgb(28, 0, 128);
     color: white;
     border-radius: 5px;
@@ -138,7 +138,7 @@ h3 {
     margin-bottom: 8px;
 }
 
-.btn:hover {
+.choices:hover {
     background: rgb(174, 43, 183);
     color: white;
 }
