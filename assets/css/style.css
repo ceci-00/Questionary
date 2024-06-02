@@ -155,6 +155,7 @@ header {
     border-radius: 5px;
     width: 90px;
     height: 30px;
+    margin-bottom: 10px;
 }
 
 .end-btn:hover {
@@ -162,9 +163,53 @@ header {
     color: white;
 }
 
-.high-scores {
-    color: rgb(174, 43, 183);
-    position: absolute;
-    top: 10px;
-    left: 10px;
+#high-scores {
+    background-color: rgb(28, 0, 128);
+    color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5px;
+    width: 90px;
+    height: 30px;
+    margin-top: 20px;
+}
+
+#high-scores:hover {
+    background: rgb(174, 43, 183);
+    color: white;
+}
+
+.clear-btn {
+    background-color: rgb(28, 0, 128);
+    color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5px;
+    width: 90px;
+    height: 35px;
+    margin-top: 20px;
+}
+
+.clear-btn:hover {
+    background: rgb(174, 43, 183);
+    color: white;
+}
+
+.restart-btn {
+    background-color: rgb(28, 0, 128);
+    color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5px;
+    width: 90px;
+    height: 30px;
+    margin-top: 20px;
+}
+
+.restart-btn:hover {
+    background: rgb(174, 43, 183);
+    color: white;
 }
