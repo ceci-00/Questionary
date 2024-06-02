@@ -114,7 +114,6 @@ header {
     font-size: 120%;
     margin-top: 20px;
     padding-top: 10px;
-    color: gray;
     border-top: 2px solid rgb(201, 193, 193);
 }
 
@@ -161,4 +160,11 @@ header {
 .end-btn:hover {
     background: rgb(174, 43, 183);
     color: white;
+}
+
+.high-scores {
+    color: rgb(174, 43, 183);
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
