@@ -63,8 +63,6 @@ function startQuiz() {
     showQuestion()
 }
 
-//timer you'll need to check if we've reached the last question or we ran out of time -> end the Timer and call endQuiz()
-
 function showQuestion() {
     console.log("Show Question: ", currentQuestion);
     // display the question
@@ -136,43 +134,36 @@ function endQuiz() {
     // show the final score
     document.getElementById('final-score').textContent = time;
     finalScore();
-    logEnd(); // Call the logEnd function
 }
 
 function clockTick() {
-    // update time
+    // update the time
     time--;
     timerEl.textContent = time;
-
-    // check if user ran out of time
+    // check if the time has run out
     if (time <= 0) {
-        quizEnd();
+        endQuiz();
     }
 }
 
 // all done screen - enter initials and submit to view high scores
 function finalScore() {
     // get the form element
-    var form = document.getElementById('submit-form');
+    var form = document.getElementById('end-form');
     // add an event listener to the form
     form.addEventListener('submit', function (e) {
         e.preventDefault();
-        // get the input value
+        // get the initials from the input
         var initials = document.getElementById('initials').value;
-        // get the score
-        var score = time;
-        // save to local storage
+        // get the high scores from local storage
         var highScores = JSON.parse(localStorage.getItem('highScores')) || [];
-        var newScore = {
-            initials: initials,
-            score: score
-        };
-        highScores.push(newScore);
+        // push the new score into the high scores
+        highScores.push({ initials: initials, score: time });
+        // save the high scores back to local storage
         localStorage.setItem('highScores', JSON.stringify(highScores));
-        // redirect to high scores page
+        // redirect to the high scores page
         window.location.href = 'highscores.html';
     });
-    highScores();
 }
 
 // display scores
@@ -182,25 +173,18 @@ function highScores() {
     highScores.sort(function (a, b) {
         return b.score - a.score;
     });
-    // get the ul element
-    var ul = document.getElementById('high-scores');
-    // loop through the high scores
+    // get the high scores list element
+    var highScoresList = document.getElementById('high-scores-list');
+    // loop through the high scores and display them highest to lowest
     for (var i = 0; i < highScores.length; i++) {
         var li = document.createElement('li');
         li.textContent = highScores[i].initials + ' - ' + highScores[i].score;
-        ul.appendChild(li);
+        highScoresList.appendChild(li);
     }
-    // add an event listener to the clear button
-    document.getElementById('clear').addEventListener('click', function () {
-        localStorage.removeItem('highScores');
-        ul.innerHTML = '';
-    });
 }
 
 
-
 startButton.addEventListener('click', startQuiz)
-
 
 
 
