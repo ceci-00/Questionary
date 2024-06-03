@@ -4,6 +4,8 @@ var answerButtons = document.querySelectorAll('#answer-btns button')
 var timerEl = document.getElementById('timer')
 var feedbackEl = document.getElementById('feedback')
 var quizContainer = document.getElementById('quiz-container')
+var clearScoresButton = document.getElementById('clear-btn')
+var goBackButton = document.getElementById('restart-btn')
 
 // setting up the questions and answers
 var questionList = [
@@ -165,6 +167,19 @@ function finalScore() {
     });
 }
 
+// clear high scores on highscores page
+function clearScores() {
+    // clear the high scores from local storage
+    localStorage.removeItem('highScores');
+    // reload the page
+    window.location.reload();
+}
+
+// go back to the home page from the highscores page
+function goBack() {
+    window.location.href = 'index.html';
+}
+
 // display scores
 // gathers data from previous scores and sorts highest to lowest
 function highScores() {
@@ -180,25 +195,22 @@ function highScores() {
         li.textContent = highScores[i].initials + ' - ' + highScores[i].score;
         highScoresList.appendChild(li);
     }
+
+    // event listener for clear scores button
+    var clearScoresButton = document.getElementById('clear-btn');
+    clearScoresButton.addEventListener('click', clearScores);
+
+    // event listener for go back button
+    var goBackButton = document.getElementById('restart-btn');
+    goBackButton.addEventListener('click', goBack);
 }
 
-// clear high scores
-function clearScores() {
-    localStorage.removeItem('highScores');
-    window.location.reload();
-}
-
-// go back to the home page
-function goBack() {
-    window.location.href = 'index.html';
-}
+document.addEventListener('DOMContentLoaded', function () {
+    highScores();
+});
 
 // event listener for the start button
-startButton.addEventListener('click', startQuiz)
-// event listener for clear scores button
-document.getElementById('clear-btn').addEventListener('click', clearScores)
-// event listener for go back button
-document.getElementById('restart-btn').addEventListener('click', goBack)
+startButton.addEventListener('click', startQuiz);
 
 
 
