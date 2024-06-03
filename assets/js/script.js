@@ -124,7 +124,6 @@ function setNextQuestion() {
 
 // end quiz
 function endQuiz() {
-    logStart();
     console.log("end of quiz");
     clearInterval(timerID);
     quizContainer.style.display = 'none';
@@ -183,8 +182,23 @@ function highScores() {
     }
 }
 
+// clear high scores
+function clearScores() {
+    localStorage.removeItem('highScores');
+    window.location.reload();
+}
+
+// go back to the home page
+function goBack() {
+    window.location.href = 'index.html';
+}
+
 // event listener for the start button
 startButton.addEventListener('click', startQuiz)
+// event listener for clear scores button
+document.getElementById('clear-btn').addEventListener('click', clearScores)
+// event listener for go back button
+document.getElementById('restart-btn').addEventListener('click', goBack)
 
 
 
