@@ -5,6 +5,7 @@ var timerEl = document.getElementById('timer')
 var feedbackEl = document.getElementById('feedback')
 var quizContainer = document.getElementById('quiz-container')
 
+// setting up the questions and answers
 var questionList = [
     {
         question: "Commonly used data types DO not Include:",
@@ -41,14 +42,7 @@ var timerID
 var currentQuestionIndex = 0
 var currentQuestion = questionList[currentQuestionIndex];
 
-function logStart() {
-    console.log("=====================================")
-}
-function logEnd() {
-    console.log("*****************************************")
-}
-
-
+// start quiz
 function startQuiz() {
     console.log('started')
     // hides home page and displays quiz container
@@ -63,6 +57,7 @@ function startQuiz() {
     showQuestion()
 }
 
+// show question
 function showQuestion() {
     console.log("Show Question: ", currentQuestion);
     // display the question
@@ -76,6 +71,7 @@ function showQuestion() {
         answerButtons[i].addEventListener('click', selectAnswer)
     }
 }
+
 // select answer
 function selectAnswer(e) {
     console.log("SELECTED");
@@ -100,7 +96,7 @@ function selectAnswer(e) {
         feedbackEl.style.color = 'red';
     }
 
-    // Set a timeout to display the feedback and move to the next question
+    // Set a timeout to display the feedback and move to the next question, unless it's the last question
     setTimeout(function () {
         feedbackEl.textContent = '';
         if (currentQuestionIndex < questionList.length - 1) {
@@ -115,15 +111,18 @@ function selectAnswer(e) {
 function setNextQuestion() {
     console.log("Setting next question");
     currentQuestionIndex++;
+    // check if there are more questions
     if (currentQuestionIndex < questionList.length) {
         currentQuestion = questionList[currentQuestionIndex];
         showQuestion();
     } else {
+        // if there are no more questions, end the quiz
         endQuiz();
         console.log('end of quiz');
     }
 }
 
+// end quiz
 function endQuiz() {
     logStart();
     console.log("end of quiz");
@@ -136,6 +135,7 @@ function endQuiz() {
     finalScore();
 }
 
+// update the timer in the top right corner
 function clockTick() {
     // update the time
     time--;
@@ -183,7 +183,7 @@ function highScores() {
     }
 }
 
-
+// event listener for the start button
 startButton.addEventListener('click', startQuiz)
 
 

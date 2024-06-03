@@ -4,31 +4,26 @@
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
-
-body {
-    background-color: blueviolet;
-}
-
+/* style for the header */
 header {
-    background-color: aquamarine;
     padding: 10px 0;
     text-align: center;
 }
-
+/* style for the view high scores link */
 .scores-link {
     color: rgb(174, 43, 183);
     position: absolute;
     top: 10px;
     left: 10px;
 }
-
+/* style for the timer */
 .time {
     color: rgb(174, 43, 183);
     position: absolute;
     top: 10px;
     right: 10px;
 }
-
+/* style for the home page */
 .home {
     background-color: white;
     height: 100vh;
@@ -44,7 +39,7 @@ header {
     align-items: center;
     flex-direction: column;
 }
-
+/* style for the title and description on homepage */
 .home-page h1 {
     margin-bottom: 15px;
     text-align: center;
@@ -54,7 +49,7 @@ header {
     text-align: center;
     margin-bottom: 30px;
 }
-
+/* start quiz button style */
 .start-btn {
     background-color: rgb(28, 0, 128);
     color: white;
@@ -65,12 +60,12 @@ header {
     width: 90px;
     height: 30px;
 }
-
+/* hover effect for the start button */
 .start-btn:hover {
     background: rgb(174, 43, 183);
     color: white;
 }
-
+/* style for the quiz */
 .quiz {
     height: 100vh;
     width: 100%;
@@ -81,17 +76,17 @@ header {
     display: flex;
     justify-content: center;
 }
-
+/* style for the questions */
 .quiz h2 {
     margin-bottom: 15px;
     text-align: center;
 }
-
+/* display answers toward left side of the screen */
 .answer-btns {
     display: grid;
     padding-right: 140px;
 }
-
+/* style for answer buttons */
 #choices {
     background-color: rgb(28, 0, 128);
     color: white;
@@ -103,12 +98,12 @@ header {
     height: 30px;
     margin-bottom: 10px;
 }
-
+/* hover effect for answer buttons */
 #choices:hover {
     background: rgb(174, 43, 183);
     color: white;
 }
-
+/* feedback for correct or wrong answer */
 .feedback {
     font-style: italic;
     font-size: 120%;
@@ -116,15 +111,15 @@ header {
     padding-top: 10px;
     border-top: 2px solid rgb(201, 193, 193);
 }
-
+/* correct answer */
 .feedback.correct {
     color: green;
 }
-
+/* wrong answer */
 .feedback.wrong {
     color: red;
 }
-
+/* style for the end of the quiz */
 .end {
     height: 100vh;
     width: 100%;
@@ -145,7 +140,7 @@ header {
     text-align: center;
     margin-bottom: 30px;
 }
-
+/* style for the final score */
 .end-btn {
     background-color: rgb(28, 0, 128);
     color: white;
@@ -157,12 +152,12 @@ header {
     height: 30px;
     margin-bottom: 10px;
 }
-
+/* hover effect for the final score button */
 .end-btn:hover {
     background: rgb(174, 43, 183);
     color: white;
 }
-
+/* style for the initials form */
 .submit-btn {
     background-color: rgb(28, 0, 128);
     color: white;
@@ -174,24 +169,7 @@ header {
     height: 30px;
     margin-top: 20px;
 }
-
-#high-scores {
-    background-color: rgb(28, 0, 128);
-    color: white;
-    border-radius: 5px;
-    border: 1px solid black;
-    text-align: center;
-    border-radius: 5px;
-    width: 90px;
-    height: 30px;
-    margin-top: 20px;
-}
-
-#high-scores:hover {
-    background: rgb(174, 43, 183);
-    color: white;
-}
-
+/* style for the clear button on high scores page */
 .clear-btn {
     background-color: rgb(28, 0, 128);
     color: white;
@@ -208,7 +186,7 @@ header {
     background: rgb(174, 43, 183);
     color: white;
 }
-
+/* style for the restart button on high scores page */
 .restart-btn {
     background-color: rgb(28, 0, 128);
     color: white;
@@ -224,4 +202,37 @@ header {
 .restart-btn:hover {
     background: rgb(174, 43, 183);
     color: white;
+}
+/* style for the high scores page */
+.high-scores {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+/* style for the high scores container */
+#high-scores-container {
+    height: 40rem;
+    width: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: aqua;
+    border: 5px solid rgb(174, 43, 183);
+}
+
+.high-scores h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+/* style for the high scores list */
+.high-scores > ul {
+    text-align: center;
+    margin-bottom: 30px;
+    list-style-type: none;
 }
